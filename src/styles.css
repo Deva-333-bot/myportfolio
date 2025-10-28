@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: custom scroll and smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+}
+
+.dark body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}

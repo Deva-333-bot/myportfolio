@@ -1,0 +1,21 @@
+{
+  "name": "oduo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^10.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-scroll": "^1.9.3",
+    "typewriter-effect": "^2.22.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
