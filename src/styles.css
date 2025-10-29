@@ -1,19 +1,72 @@
+/* 🌿 Global Styles for Oduor Daivine Oluoch Portfolio */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: custom scroll and smooth transitions */
+/* Smooth scrolling for page transitions */
 html {
   scroll-behavior: smooth;
 }
 
+/* Base body styling */
 body {
-  background-color: #ffffff;
-  color: #111827;
+  background-color:whitesmoke;
+  color: #111827; /* Slate-900 */
   font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark mode (optional toggle later) */
 .dark body {
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: #0f172a; /* Deep navy */
+  color: #f8fafc; /* Soft white */
 }
+
+/* Link styling */
+a {
+  color: #16a34a; /* Tailwind green-600 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #15803d; /* Tailwind green-700 */
+}
+
+/* Scrollbar customization (optional but sleek) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #16a34a;
+  border-radius: 4px;
+}
+
+/* Section spacing (ensures visual balance between sections) */
+section {
+  scroll-margin-top: 80px; /* Prevents content hiding under navbar */
+}
+section {
+  scroll-margin-top: 100px;
+}
+section + section {
+  margin-top: 4rem;
+}
+section {
+  padding: 2rem 1rem;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+ 

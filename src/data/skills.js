@@ -1,13 +1,43 @@
-import { FaPython, FaJava, FaJsSquare, FaReact } from "react-icons/fa";
-import { SiMysql, SiPostgresql, SiFastapi, SiTensorflow } from "react-icons/si";
+ import React from "react";
+import { motion } from "framer-motion";
+import { skills } from "../data/skills"; // ✅ Import your centralized skills data
+import SkillCard from "./SkillCard"; // ✅ Import your reusable SkillCard component
 
-export const skills = [
-  { name: "Python", icon: FaPython },
-  { name: "Java", icon: FaJava },
-  { name: "JavaScript", icon: FaJsSquare },
-  { name: "React", icon: FaReact },
-  { name: "MySQL", icon: SiMysql },
-  { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "FastAPI", icon: SiFastapi },
-  { name: "Machine Learning", icon: SiTensorflow },
-];
+export default function Skills() {
+  return (
+    <section id="skills" className="py-20 bg-white text-center px-6">
+      {/* Section Heading */}
+      <motion.h2
+        className="text-4xl font-bold text-green-600 mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Skills
+      </motion.h2>
+
+      {/* Skills Grid */}
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-5xl mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+        }}
+      >
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <SkillCard skill={skill} />
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+}
